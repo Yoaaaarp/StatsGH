@@ -1,0 +1,21 @@
+<!-- BASIC INFORMATIONS -->
+<div class="jumbotron">
+  <h2>{{repos.name}}</h2>
+  <h3>Created by : {{repos.owner.login}}</h3>
+  <p>
+    <u><b>Description</b></u> : </br>
+    {{repos.description}}
+  </p>
+  <p>
+    Main language : {{repos.language}} <br/>
+    Forked {{repos.forks_count}} times
+  </p>
+</div>
+
+<!-- SOME CHARTS -->
+<div class="container">
+  <div class="col-md-12" ng-if="commitChart.chartContributorData && commitChart.chartContributorLabels">
+    <!-- PARTICIPATIONS CHART -->
+    <canvas class="chart chart-bar" chart-data="commitChart.chartContributorData" chart-labels="commitChart.chartContributorLabels"></canvas>
+  </div>
+</div>
