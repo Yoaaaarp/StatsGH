@@ -10,9 +10,12 @@
     Main language : {{repos.language}} <br/>
     Forked {{repos.forks_count}} times
   </p>
+  <p>
+    <a class="btn btn-primary btn-lg" href="#/user/?username={{username}}" role="button">Back to user</a>
+  </p>
 </div>
 
-<!-- SOME CHARTS -->
+<!-- CHART -->
 <div class="container">
   <div class="col-md-12" ng-if="commitChart.chartContributorData && commitChart.chartContributorLabels">
     <!-- PARTICIPATIONS CHART -->
